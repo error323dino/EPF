@@ -32,6 +32,17 @@ class HomeFragment : Fragment() {
         return root
     }
 
+    override fun onViewCreated (view: View, savedInstanceState: Bundle?){
+        super.onViewCreated(view, savedInstanceState)
+        binding.buttonDividend.setOnClickListener{
+            findNavContrroller().navigate(R.id.action_nav_name_to_nav_dividend)
+        }
+
+        binding.buttonInvestment.setOnClickListener{
+            findNavController().navigate(R.id.action_nav_name_to_nav_investment)
+        }
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null

@@ -54,4 +54,19 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
+
+    class ExitDialogFragment: DialogFragment(){
+        override fun onCreaeteDialog(savedInstanceState: Bundle?): Dialog{
+            val builder = AlertDialog.Builder(requireActivity())
+
+            builder.setMessage(getString(R.string.exit_message))
+                .setPositiveButton(getString(R.string.exit), {dialog, id -> requreActivity().finish()})
+                .setNegativeButton(getString(R.string.cancel),
+                    {
+                        dialog, id ->
+                    })
+
+            return builder.create()
+        }
+    }
 }
