@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.fragment.findNavController
+import com.example.epf.R
 import com.example.epf.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -35,11 +38,11 @@ class HomeFragment : Fragment() {
     override fun onViewCreated (view: View, savedInstanceState: Bundle?){
         super.onViewCreated(view, savedInstanceState)
         binding.buttonDividend.setOnClickListener{
-            findNavContrroller().navigate(R.id.action_nav_name_to_nav_dividend)
+            findNavController().navigate(R.id.action_nav_home_to_nav_dividend)
         }
 
         binding.buttonInvestment.setOnClickListener{
-            findNavController().navigate(R.id.action_nav_name_to_nav_investment)
+            findNavController().navigate(R.id.action_nav_home_to_nav_investment)
         }
     }
 

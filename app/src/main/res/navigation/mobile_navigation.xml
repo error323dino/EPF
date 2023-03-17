@@ -43,4 +43,8 @@
         android:name="com.example.epf.ui.investment.InvestmentFragment"
         android:label="@string/menu_investment"
         tools:layout="@layout/fragment_investment" />
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.example.epf.ui.about.AboutFragment"
+        android:label="@string/action_about" />
 </navigation>
